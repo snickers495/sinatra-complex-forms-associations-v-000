@@ -4,7 +4,7 @@
   <label>Name: </label>
   <input type="text" id="pet_name" name="pet[name]" value="<%= @pet.name %>">
   <label>Choose an existing owner:</label>
- <% Owner.all.each do |owner| %>
+ <% @owners.each do |owner| %>
    <input type="checkbox" id="<%= owner.id %>" name="pet[owner_id]" value="<%= owner.id %>" <%='checked' if @pet.owner.name == owner.name %>><%= owner.name %></input>
  <% end %>
  <br></br>
